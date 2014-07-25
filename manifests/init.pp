@@ -1,6 +1,8 @@
 class puppet-ircd-hybrid ($sid, $desc, $net_name, $net_desc, $admin_name,
                           $admin_desc, $admin_email, $rsa_key, $rsa_pub,
-                          $cert) {
+                          $cert, $oper_name = 'god',
+                          $oper_pwd = '$5$x5zof8qe.Yc7/bPp$5zIg1Le2Lsgd4CvOjaD20pr5PmcfD7ha/9b2.TaUyG4'
+    ) {
 
     file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6':
         ensure => 'file',
